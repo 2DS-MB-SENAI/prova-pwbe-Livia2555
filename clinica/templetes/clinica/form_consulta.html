@@ -6,12 +6,14 @@
     <title>Document</title>
 </head>
 <body>
-    <a href="form_consulta.html">criar consulta</a>
-    <a href="listar_medico.html">ver medicos</a>
+    <h1>Agendar</h1>
+    <form method="post">
+        {% csrf_token  %}
+        {{% form.as_p  %}}
 
-    <style>
-
-    </style>
+        <button type="submit">Agendar</button>
+    </form>
+    <a href="{% url 'base' %}"></a>
     
 </body>
 </html>

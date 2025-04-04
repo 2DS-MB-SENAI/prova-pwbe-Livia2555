@@ -4,7 +4,7 @@ from .forms import MedicoForm , ConsultaForm
 
 def listar_medico (request):
     listar = Medico.objects.all()
-    return render (request, 'listar_medico.html', {'listar':listar})
+    return render (request, '.templetes/clinica/listar_medico.html', {'listar':listar})
 
 def criar_consulta (request):
     if request.method == 'POST':
