@@ -15,8 +15,8 @@ STATUS =[
 ]
 
 class Medico(models.Model):
-    nome = models.CharField(max_length=10, blank=True)
-    crm = models.CharField(max_length=10, null=True, blank=True, unique=True , validators=('^[\w]{2}/[\w]{5}$'))
+    nome = models.CharField(max_length=5, blank=True)
+    crm = models.CharField(max_length=10, null=True, blank=True, unique=True)
     email = models.EmailField(null=True, blank=True)
     especialidade = models.CharField(choices=ESPECIALIDADES, max_length= 20)
 
