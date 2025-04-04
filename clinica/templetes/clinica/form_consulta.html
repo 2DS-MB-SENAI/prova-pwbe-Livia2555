@@ -8,12 +8,12 @@
 <body>
     <h1>Agendar</h1>
     <form method="post">
-        {% csrf_token  %}
-        {{% form.as_p  %}}
+        {% csrf_token %}
+        {{% form.as_p %}}
 
         <button type="submit">Agendar</button>
     </form>
-    <a href="{% url 'base' %}"></a>
+    <a href="{% url 'form_consulta' %}"></a>
     
 </body>
 </html>
