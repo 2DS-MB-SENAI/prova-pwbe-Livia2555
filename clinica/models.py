@@ -15,10 +15,10 @@ STATUS =[
 ]
 
 class Medico(models.Model):
-    nome = models.CharField(max_length=10 , null=True, blank=True)
+    nome = models.CharField(max_length=10, blank=True)
     crm = models.CharField(max_length=10, null=True, blank=True, unique=True)
     email = models.EmailField(null=True, blank=True)
-    espe = models.CharField(choices=ESPECIALIDADES, max_length= 20)
+    especialidade = models.CharField(choices=ESPECIALIDADES, max_length= 20)
 
     def __str__(self):
         return self.nome
